@@ -1,0 +1,176 @@
+
+<div class="test">
+	<div class="container">
+       	<div class="row">
+       		<div class="col-lg-12">
+       			<div class="headerz">
+       			<h1>
+					1. Shipping
+				</h1>
+				</div>
+				
+			<form>	
+			<form class="form-inline">
+
+				<div class="col-md-6">
+				  <div class="form-group">
+				    <label for="exampleInputName2">First Name</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
+
+				<div class="col-md-6">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Last Name</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
+
+				<div class="col-md-12">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Address</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
+
+				<div class="col-md-12">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Address line 2</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
+
+				<div class="col-md-6">
+				  <div class="form-group">
+				    <label for="exampleInputName2">City</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
+
+				<div class="col-md-6">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Province</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
+
+				<div class="col-md-6">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Postal Code</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
+
+				<div class="col-md-6">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Telephone</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
+	
+			</form>
+			</form>
+				
+       		</div>
+       	</div>
+    </div>
+
+    <div class="billing">
+    <div class="container">
+       	<div class="row">
+       		<div class="col-lg-12">
+       			<div class="headerz">
+		       	<h1>
+					2. Billing
+				</h1>
+				</div>
+				<form>
+
+				<div class="col-md-12">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Name on Card</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
+
+				<div class="col-md-12">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Card Number</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
+
+				<div class="col-md-4">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Month</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
+
+				<div class="col-md-4">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Year</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
+
+				<div class="col-md-4">
+				  <div class="form-group">
+				    <label for="exampleInputName2">CVC</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
+					
+				</form>
+       		</div>
+       	</div>
+    </div>
+    </div>
+
+
+	<div class="container">
+       	<div class="row">
+       		<div class="col-lg-12">
+       			<div class="headerz">
+	   			<h1>
+					3. Confirmation
+				</h1>
+				</div>
+				<p class="inyourcart">
+					In Your Cart
+				</p>
+				<div class="incart" ng-repeat="product in Ctrl.cart">
+					<div class="smallhead">
+					<h2><strong>{{product.name}}</strong></h2>
+					</div>
+					<div class="smallhead">
+					<h2>Price {{product.price}}</h2>
+					</div>
+					<div class="smallhead">
+					<h2>Quantity X {{product.customerQuantity}}</h2>
+					</div>
+					
+				</div>
+
+				<div class="finalamt">
+					<p class="total">Sub Total {{Ctrl.total | currency}}</p>
+					<p class="total">Tax {{Ctrl.tax | currency}}</p>
+					<p class="total final">Final Total {{Ctrl.final_total | currency}}</p>
+				</div>
+       		</div>
+
+
+       	</div>
+    </div>
+</div>
+
+
+
+<button class="btn btn-success order" ng-click="Ctrl.open()">Order!</button>
+
+
+<button class="btn btn-danger forgot" ui-sref="shop">Shit.I forgot an item.</button>
+</div>
+
+
+

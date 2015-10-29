@@ -1,0 +1,19 @@
+.addprodtitle {
+	text-align: center;
+}
+.addprodtitle .form-control{
+	width: 100%;
+}
+
+.addProductAll {
+	text-align: center;
+}
+
+.addProductAll label {
+	display: block;
+	margin-top: 40px;
+}
+
+.addProductAll button {
+	margin-top: 40px;
+}

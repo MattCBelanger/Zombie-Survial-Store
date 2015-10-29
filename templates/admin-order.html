@@ -1,0 +1,43 @@
+
+
+<div class="container">
+	<h1 class="ordertitle">
+		Orders Feed
+	</h1>
+	<div class="row col-md-10 col-md-offset-1">
+		<div class="ordertitle" ng-repeat="order in Ctrl.orders">
+			<div class="orderdetails">
+
+			<strong>Order ID: {{order.orderId}}</strong>
+
+				<div class="ordervalues" ng-repeat="item in order.cart">
+					<div class="info" ng-show="item.firstname">First Name: {{item.firstname}}</div>
+					<div class="info" ng-show="item.lastname">Last Name: {{item.lastname}}</div>
+					<div class="info" ng-show="item.address">Address: {{item.address}}</div>
+					<div class="info" ng-show="item.addressl2">Address Line 2: {{item.addressl2}}</div>
+					<div class="info" ng-show="item.city">City: {{item.city}}</div>
+					<div class="info" ng-show="item.province">Province: {{item.province}}</div>
+					<div class="info" ng-show="item.postalcode">Province: {{item.postalcode}}</div>
+					<div class="info" ng-show="item.telephone">Province: {{item.telephone}}</div>
+
+					<div class="info" ng-show="item.billfirstname">First Name: {{item.billfirstname}}</div>
+					<div class="info" ng-show="item.billlastname">Last Name: {{item.billlastname}}</div>
+					<div class="info" ng-show="item.billaddress">Address: {{item.billaddress}}</div>
+					<div class="info" ng-show="item.billaddressl2">Address Line 2: {{item.billaddressl2}}</div>
+					<div class="info" ng-show="item.billcity">City: {{item.billcity}}</div>
+					<div class="info" ng-show="item.billprovince">Province: {{item.billprovince}}</div>
+					<div class="info" ng-show="item.billpostalcode">Province: {{item.billpostalcode}}</div>
+					<div class="info" ng-show="item.billtelephone">Province: {{item.billtelephone}}</div>
+					&nbsp;
+					<div>Item Bought: {{item.name}}</div>
+					<div>Item Price: {{item.price}}</div>
+					<div>Quantity Bought: {{item.quantity}}</div>
+				</div>
+
+				<p>Total Paid: {{order.final_total}}</p>
+				<hr>
+			</div>
+
+		</div>
+	</div>
+</div>
